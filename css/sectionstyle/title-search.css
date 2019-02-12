@@ -1,0 +1,13 @@
+#title_search {
+  margin: 75px 0px 30px 0;
+}
+
+#title_search .title {
+  text-align: center;
+}
+
+#title_search .title h1 {
+  font-weight: 300;
+  font-size: 100px;
+  color: red;
+}

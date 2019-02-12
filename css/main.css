@@ -1,0 +1,13 @@
+@import "reset.css";
+@import "sectionstyle/title-search.css";
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: black;
+}
+

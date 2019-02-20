@@ -1,9 +1,15 @@
-#display .wrapper {
+#actors_display {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+#actors_display .wrapper {
   box-sizing: content-box;
   margin-top: 50px;
   margin-bottom: 50px;
   width: 350px;
-  height: 500px;
+  height: 850px;
   border: 1px solid white;
   margin-left: 65px;
   overflow: hidden;
@@ -42,14 +48,13 @@
   background-size: cover;
   border-radius: 54px;
   max-width: 100px;
-  position: relative;
+  /* position: relative; */
   padding-left: 10px;
+  padding-bottom: 5px;
 }
 
 .actors .actors_items .actor_img .actor_name {
  float: right;
- right: 126px;
- top: 78px;
  margin-right: 131px;
  margin-top: 50px;
  /* position: absolute; */
@@ -59,4 +64,39 @@
 .actor_name h3 {
   font-weight: 400;
   padding-top: 5px;
+}
+
+#movies_display {
+  margin-top: 50px;
+  color: black;
+  webkit-box-shadow: 1px 4px 105px -9px rgba(14,142,240,1);
+  -moz-box-shadow: 1px 4px 105px -9px rgba(14,142,240,1);
+  box-shadow: 1px 4px 105px -9px rgba(14,142,240,1);
+}
+
+.background_display {
+  color: white;
+  text-align: center;
+  padding-top: 5px;
+  
+}
+
+.title h1{
+  font-size: 20px;
+  padding-bottom: 5px;
+  font-weight: 400;
+}
+
+.year_release h2 {
+  padding-bottom: 5px;
+  font-weight: 300;
+}
+
+.summary p {
+  font-weight: 300;
+}
+
+.rating h1 {
+  padding-top: 5px;
+  font-weight: 400;
 }

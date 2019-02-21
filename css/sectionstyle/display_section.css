@@ -72,13 +72,13 @@
   webkit-box-shadow: 1px 4px 105px -9px rgba(14,142,240,1);
   -moz-box-shadow: 1px 4px 105px -9px rgba(14,142,240,1);
   box-shadow: 1px 4px 105px -9px rgba(14,142,240,1);
+  height: 650px;
 }
 
 .background_display {
   color: white;
   text-align: center;
   padding-top: 5px;
-  
 }
 
 .title h1{
@@ -100,3 +100,30 @@
   padding-top: 5px;
   font-weight: 400;
 }
+
+.ad_display {
+  margin-top: 50px;
+  margin-right: 67px;
+  color: black;
+  webkit-box-shadow: 1px 4px 105px -9px rgba(14,142,240,1);
+  -moz-box-shadow: 1px 4px 105px -9px rgba(14,142,240,1);
+  box-shadow: 1px 4px 105px -9px rgba(14,142,240,1);
+  height: 300px;
+}
+
+.ad_title h1 {
+  padding-top: 5px;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+.ad_image a img {
+padding: 10px 40px;
+max-width: 300px;
+max-height: 300px;
+
+}
+
+

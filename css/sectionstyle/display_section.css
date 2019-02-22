@@ -101,7 +101,7 @@
   font-weight: 400;
 }
 
-.ad_display {
+#ad_display {
   margin-top: 50px;
   margin-right: 67px;
   color: black;
@@ -120,9 +120,9 @@
 }
 
 .ad_image a img {
-padding: 10px 40px;
-max-width: 300px;
-max-height: 300px;
+padding: 10px 53px;
+max-width: 400px;
+max-height: 400px;
 
 }
 

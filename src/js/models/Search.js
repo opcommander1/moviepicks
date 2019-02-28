@@ -9,7 +9,7 @@
 //       } catch (error) {
 //         alert(error)
 //       }
-//     }
+//     };
 
 //   getResults();
 

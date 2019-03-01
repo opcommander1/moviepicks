@@ -96,6 +96,42 @@ form input:focus {
   animation: moveRightToCenter 4s ease-in-out 0s forwards
 }
 
+.results_list {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: rgb(82, 167, 236);
+  border: 1px solid white;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  width: 300px;
+  margin-left: 341px;
+  cursor: pointer;
+}
+
+.result_data {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.result_data h3 {
+  font-weight: 300;
+}
+
+.result_data .result_title {
+  display: inline-block;
+}
+
+.result_data .result_year {
+  display: inline-block;
+}
+
+
+
+
+
+
+
 
 
 

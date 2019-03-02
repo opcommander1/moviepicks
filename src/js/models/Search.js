@@ -1,30 +1,18 @@
-// import axios from 'axios';
-// import {key, proxy } from '../config';
+import axios from 'axios';
+import {key, proxy } from '../config';
 
+export default class Search {
+  constructor(query) {
+    this.query = query;
+  }
 
-//   async function getResults() {
-//     try {
-//       const res = await axios(`${proxy}'https://api.themoviedb.org/3/movie/550?api_key=${key}&q=${query}`);
-//       console.log(res)
-//       } catch (error) {
-//         alert(error)
-//       }
-//     }
-
-//   getResults();
-
-
-  // export default class Search {
-  //   constructor(query) {
-  //     this.query = query;
-  //   }
-  
-  //   async getResults() {
-  //     try {
-  //       const res = await axios(`${proxy}'https://api.themoviedb.org/3/movie/550?api_key=${key}&q=${this.query}`);
-  //       console.log(res)
-  //       } catch (error) {
-  //         alert(error)
-  //       }
-  //     }
-  //   }
+  async getResults() {
+      try {
+        const res = await axios(`${proxy}https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${this.query}`);
+        this.result = res.data.results;
+        // console.log(this.result)
+      } catch (error) {
+        alert(error);
+      }
+    }
+  }

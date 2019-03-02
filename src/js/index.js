@@ -1,14 +1,36 @@
-import axios from 'axios';
-import {key, proxy } from './config';
+import Search from './models/Search';
+import * as searchView from './views/searchView';
+import { elements } from './views/base';
 
 
-  async function getResults(query) {
-    try {
-      const res = await axios(`${proxy}https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${query}`);
-      console.log(res)
-      } catch (error) {
-        alert(error)
-      }
-    }
 
-  getResults('matrix');
+
+
+const state = {};
+
+/** Search Controller */
+const controlSearch = async () => {
+  // 1. Get query from view
+  const query = searchView.getInput();
+  console.log(query);
+
+  if (query) {
+    // 2 New search object and add to state
+    state.search = new Search(query);
+
+    // 3 Prepare UI for results
+
+    // 4 Search for recipes
+    await state.search.getResults();
+
+    // 5 Render results on UI
+    console.log(state.search.result);
+  }
+
+}
+
+elements.searchForm.addEventListener('submit', e => {
+  e.preventDefault();
+  controlSearch();
+})
+

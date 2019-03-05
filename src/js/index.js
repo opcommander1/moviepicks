@@ -6,6 +6,7 @@ import { elements } from './views/base';
 
 
 
+
 const state = {};
 
 /** Search Controller */
@@ -20,17 +21,23 @@ const controlSearch = async () => {
 
     // 3 Prepare UI for results
 
+    try {
     // 4 Search for recipes
     await state.search.getResults();
 
     // 5 Render results on UI
+    searchView.renderResults(state.search.result)
     console.log(state.search.result);
+    } catch (error) {
+      alert('Something worng with the earch');
+    }
   }
-
 }
 
 elements.searchForm.addEventListener('submit', e => {
   e.preventDefault();
   controlSearch();
-})
+});
+
+
 

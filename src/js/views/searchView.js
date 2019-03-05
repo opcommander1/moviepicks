@@ -6,19 +6,29 @@ export const clearInput = () => {
   elements.searchInput.value = '';
 };
 
-
-const renderMovieResults = movie => {
+export const limitReleaseYear = (year) => {
+  const newYear = [];
+        newYear.push(year.slice(0,4));
+         //return the result
+    return `${newYear}`;
+      }
+    
+const renderMovie = movie => {
   const markup = `
   <li>
       <div class="result_data">
         <h3 class="result_title">
-          Title
+          ${movie.title}
         </h3>
         <h3 class="result_year">
-          1997
+          ${limitReleaseYear(movie.release_date)}
         </h3>
       </div>
     </li>
     `;
     elements.searchResults.insertAdjacentHTML('beforeend', markup);
 };
+
+export const renderResults = (movies) => {
+  movies.forEach(renderMovie)
+}

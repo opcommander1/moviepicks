@@ -53,6 +53,7 @@
   font-size: 19px;
   font-weight: 300;
   margin-left: 0;
+  text-align: center;
 }
 
 .search_icon {
@@ -97,6 +98,9 @@ form input:focus {
 }
 
 .results_list {
+  overflow-y: scroll;
+  resize: none;
+  height: 80px;
   padding-top: 3px;
   padding-bottom: 3px;
   color: rgb(82, 167, 236);
@@ -104,8 +108,8 @@ form input:focus {
   margin-top: 20px;
   text-align: center;
   font-size: 18px;
-  width: 300px;
-  margin-left: 341px;
+  width: 382px;
+  margin-left: 312px;
   cursor: pointer;
 }
 

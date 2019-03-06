@@ -12,7 +12,7 @@ export const limitReleaseYear = (year) => {
          //return the result
     return `${newYear}`;
       }
-    
+  
 const renderMovie = movie => {
   const markup = `
   <li>

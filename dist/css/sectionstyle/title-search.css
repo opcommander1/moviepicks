@@ -103,7 +103,7 @@ form input:focus {
   height: 80px;
   padding-top: 3px;
   padding-bottom: 3px;
-  color: rgb(82, 167, 236);
+  /* color: rgb(82, 167, 236); */
   border: 1px solid white;
   margin-top: 20px;
   text-align: center;
@@ -112,6 +112,16 @@ form input:focus {
   margin-left: 312px;
   cursor: pointer;
 }
+
+.results a:link {
+  color: rgb(82, 167, 236);
+  text-decoration: none;
+}
+
+.results a:visited {
+  color: white;
+}
+
 
 .result_data {
   padding-top: 3px;
@@ -128,7 +138,9 @@ form input:focus {
 
 .result_data .result_year {
   display: inline-block;
+  
 }
+
 
 
 

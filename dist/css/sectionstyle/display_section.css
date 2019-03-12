@@ -9,7 +9,7 @@
   margin-top: 50px;
   margin-bottom: 50px;
   width: 350px;
-  height: 850px;
+  height: 701px;
   border: 1px solid white;
   margin-left: 65px;
   overflow: hidden;
@@ -40,30 +40,46 @@
   -webkit-box-shadow: 1px 4px 105px -9px rgba(0,0,0,1);
   -moz-box-shadow: 1px 4px 105px -9px rgba(0,0,0,1);
   box-shadow: 1px 4px 105px -9px rgba(0,0,0,1);
+  text-align: center;
+  color: #000000;
 }
 
 .actor_img img {
   padding-top: 10px;
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 54px;
+  /* border-radius: 54px; */
   max-width: 100px;
-  /* position: relative; */
+  /* left: 120px; */
+  position: relative;
   padding-left: 10px;
   padding-bottom: 5px;
+  text-align: center;
 }
 
 .actors .actors_items .actor_img .actor_name {
- float: right;
- margin-right: 131px;
- margin-top: 50px;
+ /* margin-top: 0px; */
+ /* right: 10px; */
+ margin-top: 3px;
  /* position: absolute; */
- color: #000000;
+ /* color: #000000; */
+}
+
+.actors .actors_items .actor_img .stage_name {
+  /* right: 10px; */
+  /* position: absolute; */
+  /* color: #000000; */
+  margin-bottom: 16px;
 }
 
 .actor_name h3 {
   font-weight: 400;
   padding-top: 5px;
+}
+
+.stage_name h3 {
+  font-weight: 600;
+  padding-bottom: 15px;
 }
 
 #movies_display {

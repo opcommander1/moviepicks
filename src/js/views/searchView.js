@@ -6,6 +6,10 @@ export const clearInput = () => {
   elements.searchInput.value = '';
 };
 
+export const clearResult = () => {
+  elements.searchResults.innerHTML = '';
+}
+
 export const limitReleaseYear = (year) => {
   const newYear = [];
         newYear.push(year.slice(0,4));
@@ -16,6 +20,7 @@ export const limitReleaseYear = (year) => {
 const renderMovie = movie => {
   const markup = `
   <li>
+      <a href="#${movie.id}">
       <div class="result_data">
         <h3 class="result_title">
           ${movie.title}

@@ -6,13 +6,15 @@ export default class Search {
     this.query = query;
   }
 
-  async getResults() {
+  async getMovieResults() {
       try {
         const res = await axios(`${proxy}https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${this.query}`);
         this.result = res.data.results;
-        // console.log(this.result)
+        // console.log(this.result);
       } catch (error) {
         alert(error);
       }
     }
   }
+
+  

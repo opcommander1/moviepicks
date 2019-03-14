@@ -1,14 +1,9 @@
 import { elements } from './base';
 
-let actorsArrayIndex = 0;
-
 export const clearCredits = () => {
   elements.actorsResults.innerHTML = '';
 };
 
-const actorsCounter = () => {
-    return actorsArrayIndex += 1;
-};
 
 const renderActors = credits => {
   const markup = `
@@ -24,7 +19,6 @@ const renderActors = credits => {
         </div>
       </li>
       `;
-      actorsCounter();
       elements.actorsResults.insertAdjacentHTML('beforeend', markup);
 }
 

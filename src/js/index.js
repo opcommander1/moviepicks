@@ -1,8 +1,10 @@
 import Search from './models/Search';
 import Credits from './models/Credits';
+import MovieDetails from './models/MovieDetail';
 import * as searchView from './views/searchView';
 import * as creditsView from './views/creditsView';
-import { elements } from './views/base';
+import { elements, renderLoader, clearLoader } from './views/base';
+
 
 
 
@@ -35,7 +37,7 @@ const controlSearch = async () => {
 
     // Render results on UI
     searchView.renderResults(state.search.result)
-    console.log(state.search.result);
+    // console.log(state.search.result);
     // console.log(state.credits);
    
     // console.log(state.credits.result);
@@ -48,18 +50,20 @@ const controlSearch = async () => {
 elements.searchForm.addEventListener('submit', e => {
   e.preventDefault();
   controlSearch();
+  movieInfoControler();
 });
 
 /** Credits-Actors Information Controller */
 //Get ID from url
 const controlCredits = async () => {
   const id = window.location.hash.replace('#', '');
-  console.log(id);
+  // console.log(id);
 
   if (id) {
 
     // Prepare UI for changes
     creditsView.clearCredits();
+    renderLoader(elements.actorsResults);
 
     // Create new credits objects
     state.credits = new Credits(id);
@@ -68,9 +72,10 @@ const controlCredits = async () => {
     // Get credits data
     await state.credits.getCreditResults();
 
-    // Render credits information
+    // Render credits information to UI
+    clearLoader();
     creditsView.renderResults(state.credits.result);
-    console.log(state.credits.result);
+    // console.log(state.credits.result);
     } catch (error) {
       alert('Something wrong with the search')
     }
@@ -79,5 +84,28 @@ const controlCredits = async () => {
 
 ['hashchange', 'load'].forEach(event => window.addEventListener(event, controlCredits));
 
+/**Movie Information Display Controller */
+
+const movieInfoControler = async () => {
+  const id = window.location.hash.replace('#', '');
+  console.log(id);
+
+  if (id) {
+  //Prepare UI for changes
+
+  //Create a new MovieDetail Object
+  state.movie = new MovieDetails(id);
+
+  //Get movie detail
+  await state.movie.getMovieDetails();
+  console.log(state.movie);
+  
+  
+
+  //Render movie detail to UI
+  }
+}
+
+window.addEventListener('hashchange', movieInfoControler);
 
 

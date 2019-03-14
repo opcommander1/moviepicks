@@ -105,9 +105,14 @@
   webkit-box-shadow: 1px 4px 105px -9px rgba(14,142,240,1);
   -moz-box-shadow: 1px 4px 105px -9px rgba(14,142,240,1);
   box-shadow: 1px 4px 105px -9px rgba(14,142,240,1);
-  height: 650px;
+  height: 450px;
+  overflow: scroll;
 }
 
+.title_image img {
+  max-width: 382px;
+  text-align: center;
+}
 .background_display {
   color: white;
   text-align: center;
@@ -127,6 +132,8 @@
 
 .summary p {
   font-weight: 300;
+  padding-right: 9px;
+  padding-left: 9px;
 }
 
 .rating h1 {

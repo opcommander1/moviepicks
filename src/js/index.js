@@ -3,6 +3,7 @@ import Credits from './models/Credits';
 import MovieDetails from './models/MovieDetail';
 import * as searchView from './views/searchView';
 import * as creditsView from './views/creditsView';
+import * as movieDetailsView from './views/MovieDetailView'; 
 import { elements, renderLoader, clearLoader } from './views/base';
 
 
@@ -29,6 +30,7 @@ const controlSearch = async () => {
     // 3 Prepare UI for results
     searchView.clearInput();
     searchView.clearResult();
+  
 
     try {
     // Search for Movies
@@ -92,20 +94,30 @@ const movieInfoControler = async () => {
 
   if (id) {
   //Prepare UI for changes
-
+  movieDetailsView.clearMovie();
+  renderLoader(elements.movieDetails);
+  
   //Create a new MovieDetail Object
   state.movie = new MovieDetails(id);
 
+  try {
   //Get movie detail
   await state.movie.getMovieDetails();
   console.log(state.movie);
-  
-  
 
+  // Get all Genres in a single array
+   const genres = state.movie.getGenres();
+   console.log(genres);
+  
   //Render movie detail to UI
+  clearLoader();
+  movieDetailsView.renderMovieDetail(state.movie, genres);
+    } catch (error){
+      alert('Something went wrong with the search');
+    }
   }
-}
+};
 
-window.addEventListener('hashchange', movieInfoControler);
+['hashchange', 'load'].forEach(event => window.addEventListener(event, movieInfoControler));
 
 

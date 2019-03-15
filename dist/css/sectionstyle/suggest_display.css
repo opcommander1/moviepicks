@@ -6,20 +6,20 @@
   font-size: 30px;
 }
 
-#suggestion{
+#similar_movie{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;
   margin-bottom: 50px;
 }
 
-#suggestion_two {
+#similar_movie_two {
   grid-column: 2/3;
   padding-left: 110px;
   padding-right: 64px;
 }
 
-#suggestion_three {
+#similar_movie_three {
   grid-column: 3/3;
   padding-left: 110px;
   padding-right: 106px;

@@ -3,7 +3,10 @@ export const elements = {
   searchInput: document.querySelector('.search_field'),
   searchResults: document.querySelector('.results'),
   actorsResults: document.querySelector('.actors'), 
-  movieDetails: document.querySelector('#movies_display')
+  movieDetails: document.querySelector('#movies_display'),
+  similarMovieOne: document.querySelector('#similar_movie'),
+  similarMovieTwo: document.querySelector('#similar_movie_two'),
+  similarMovieThree: document.querySelector('#similar_movie_three')
 }
 
 export const elementsStrings = {

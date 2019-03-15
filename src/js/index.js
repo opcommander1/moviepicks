@@ -4,6 +4,7 @@ import MovieDetails from './models/MovieDetail';
 import * as searchView from './views/searchView';
 import * as creditsView from './views/creditsView';
 import * as movieDetailsView from './views/MovieDetailView'; 
+import * as similarMovieView from './views/similarMovieView';
 import { elements, renderLoader, clearLoader } from './views/base';
 
 
@@ -86,7 +87,7 @@ const controlCredits = async () => {
 
 ['hashchange', 'load'].forEach(event => window.addEventListener(event, controlCredits));
 
-/**Movie Information Display Controller */
+/**Information and Similar Movie Display Controller */
 
 const movieInfoControler = async () => {
   const id = window.location.hash.replace('#', '');
@@ -107,7 +108,13 @@ const movieInfoControler = async () => {
 
   // Get all Genres in a single array
    const genres = state.movie.getGenres();
+
+  // Gets three random similar movies 
+   const similarMovies = state.movie.getSimilarMovie();
+  
    console.log(genres);
+   console.log(similarMovies);
+ 
   
   //Render movie detail to UI
   clearLoader();
@@ -119,5 +126,7 @@ const movieInfoControler = async () => {
 };
 
 ['hashchange', 'load'].forEach(event => window.addEventListener(event, movieInfoControler));
+
+
 
 

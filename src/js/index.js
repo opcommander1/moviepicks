@@ -96,6 +96,7 @@ const movieInfoControler = async () => {
   if (id) {
   //Prepare UI for changes
   movieDetailsView.clearMovie();
+  similarMovieView.clearSimilarMovies();
   renderLoader(elements.movieDetails);
   
   //Create a new MovieDetail Object
@@ -109,16 +110,18 @@ const movieInfoControler = async () => {
   // Get all Genres in a single array
    const genres = state.movie.getGenres();
 
-  // Gets three random similar movies 
-   const similarMovies = state.movie.getSimilarMovie();
+  // Gets three random similar movies array index
+   const similarMoviesIndex = state.movie.getSimilarMovie();
   
    console.log(genres);
-   console.log(similarMovies);
+   console.log(similarMoviesIndex);
+  //  console.log(similarMoviesIndex);
  
   
   //Render movie detail to UI
   clearLoader();
   movieDetailsView.renderMovieDetail(state.movie, genres);
+  similarMovieView.renderSimilarMovie(state.movie.similar.results, similarMoviesIndex)
     } catch (error){
       alert('Something went wrong with the search');
     }

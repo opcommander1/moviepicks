@@ -21,29 +21,32 @@ import {key, proxy } from '../config';
       }
     };
 
-    check_Dups(randomNumber){
-      if (randomNumber[0] == randomNumber[1] || randomNumber[0] == randomNumber[2] || randomNumber[1] == randomNumber[2]) {
-        this.getSimilarMovie();
-        return true;
-      } else {
-        return false;
-      }
-    };
+    // check_Dups(randomNumber){
+    //   if (randomNumber[0] == randomNumber[1] || randomNumber[0] == randomNumber[2] || randomNumber[1] == randomNumber[2]) {
+    //     // this.getSimilarMovie();
+    //     return true;
+    //   } else {
+    //     return false;
+    //   }
+    // };
 
     getSimilarMovie() {
-      const randomNum = [];
-      for (let i = 0; i < 3; i++) {
+      let randomNum = [];
+      let random = () => {
+      for (let i = 0; i < 3;) {
         let rand = Math.floor(Math.random() * Math.floor(this.similar.results.length));
-        randomNum.push(rand);
+          if (rand == randomNum[0] || rand == randomNum[1] || rand == randomNum[2] && i == 0) {
+          i = 0;
+          } else if (rand == randomNum[0] || rand == randomNum[1] || rand == randomNum[2] && i > 0) {
+          i--;
+          } else {
+          randomNum.push(rand);
+          i++;
+          }
       }
-        console.log(randomNum);
-         return this.check_Dups(randomNum);
-        // return randomNum;
-        // check_Dups(randomNum);
-        // this.similarBackdrop = this.similar.results[0].backdrop_path;
-        // this.similarTitle = this.similar.results[0].original_title;
-        // this.similarDate = this.similar.results[0].release_date;
-        // this.similarRating = this.similar.results[0].vote_average;
+    }
+    random();
+    return randomNum.slice(0, 3);
     };
 
     getGenres() {

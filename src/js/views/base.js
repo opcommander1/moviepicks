@@ -4,9 +4,9 @@ export const elements = {
   searchResults: document.querySelector('.results'),
   actorsResults: document.querySelector('.actors'), 
   movieDetails: document.querySelector('#movies_display'),
-  similarMovieOne: document.querySelector('#similar_movie'),
-  similarMovieTwo: document.querySelector('#similar_movie_two'),
-  similarMovieThree: document.querySelector('#similar_movie_three')
+  similarMovieOne: document.querySelector('.similar_movie'),
+  similarMovieTwo: document.querySelector('.similar_movie_two'),
+  similarMovieThree: document.querySelector('.similar_movie_three')
 }
 
 export const elementsStrings = {

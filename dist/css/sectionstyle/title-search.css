@@ -1,3 +1,57 @@
+nav ul {
+  float: left;
+}
+
+nav ul li {
+  float: left;
+  list-style: none;
+  position: relative;
+}
+
+nav {
+  width: 100%;
+  height: 1px;
+  margin-left: 87px;
+}
+
+nav ul li a {
+  display: block;
+  text-decoration-line: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 22px 14px;
+  font-weight: 300;
+  -webkit-transition: color 2s ease-in-out;
+  transition: color .6s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: rgb(82, 167, 236);
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  z-index: 1;
+  border-radius: 0px 0px 4px 4px;
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  width: 358px;
+  border-radius: 4px;
+}
+
+nav ul li ul li h2 {
+  padding: 12px 14px;
+  font-weight: 400;
+}
+
 #title_search {
   margin: 75px 0px 30px 0;
 }
@@ -19,7 +73,7 @@
   position: absolute;
   text-align: center;
   top: 30%;
-  left: 20%;
+  left: 14%;
   z-index: 1;
   font-weight: 300;
   font-size: 100px;

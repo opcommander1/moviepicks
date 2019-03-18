@@ -45,7 +45,7 @@ const controlSearch = async () => {
    
     // console.log(state.credits.result);
     } catch (error) {
-      alert('Something wrong with the search');
+      alert('Search results error');
     }
   }
 }
@@ -62,7 +62,7 @@ const controlCredits = async () => {
   const id = window.location.hash.replace('#', '');
   // console.log(id);
 
-  if (id) {
+  if ((id !== "similar_heading") && (id !== "movie_info") && (id !== "about")) {
 
     // Prepare UI for changes
     creditsView.clearCredits();
@@ -80,7 +80,7 @@ const controlCredits = async () => {
     creditsView.renderResults(state.credits.result);
     // console.log(state.credits.result);
     } catch (error) {
-      alert('Something wrong with the search')
+      alert('Actors Credits search results error')
     }
   }
 }
@@ -93,7 +93,7 @@ const movieInfoControler = async () => {
   const id = window.location.hash.replace('#', '');
   console.log(id);
 
-  if (id) {
+  if ((id !== "similar_heading") && (id !== "movie_info") && (id !== "about")){
   //Prepare UI for changes
   movieDetailsView.clearMovie();
   similarMovieView.clearSimilarMovies();
@@ -123,7 +123,7 @@ const movieInfoControler = async () => {
   movieDetailsView.renderMovieDetail(state.movie, genres);
   similarMovieView.renderSimilarMovie(state.movie.similar.results, similarMoviesIndex)
     } catch (error){
-      alert('Something went wrong with the search');
+      alert('Similar Movie search results error');
     }
   }
 };

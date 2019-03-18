@@ -1,3 +1,7 @@
+#similar_heading {
+  margin-bottom: 40px;
+}
+
 #section_title h1 {
   color: white;
   text-align: center;
@@ -10,7 +14,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 62px;
-  margin-left: 233px;
+  margin-left: 238px;
   margin-right: 243px;
   margin-bottom: 50px;
 }

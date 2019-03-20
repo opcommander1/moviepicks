@@ -1,9 +1,11 @@
 import { elements } from './base';
 
+//Clear Movie
 export const clearMovie = () => {
   elements.movieDetails.innerHTML = '';
 }
 
+//Shows only four digit year
 export const limitMovieReleaseYear = (year) => {
   const newYear = [];
         newYear.push(year.slice(0,4));
@@ -11,6 +13,7 @@ export const limitMovieReleaseYear = (year) => {
     return `${newYear}`;
       }
 
+//Shows movie to the interface
 export const renderMovieDetail = (detail, newGenres) => {
   const markup = `
   <div class="title_image">

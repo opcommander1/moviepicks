@@ -6,6 +6,7 @@ export default class Search {
     this.query = query;
   }
 
+  //Finds the requested api movie
   async getMovieResults() {
       try {
         const res = await axios(`${proxy}https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${this.query}`);

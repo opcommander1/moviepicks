@@ -1,11 +1,13 @@
 import { elements } from './base';
 
+//Clear similar movie
 export const clearSimilarMovies = () => {
   elements.similarMovieOne.innerHTML = '';
   elements.similarMovieTwo.innerHTML = '';
   elements.similarMovieThree.innerHTML = '';
 }
 
+//Shows only the four digit release year
 export const limitSimilarReleaseYear = (year) => {
   const newYear = [];
         newYear.push(year.slice(0,4));
@@ -13,6 +15,7 @@ export const limitSimilarReleaseYear = (year) => {
     return `${newYear}`;
       }
 
+//Shows similar movies to the interface
 export const renderSimilarMovie = (similar, index) => {
   const markupOne = `
   <div class="wrapper">

@@ -6,6 +6,7 @@ import {key, proxy } from '../config';
       this.id = id;
     }
 
+    //Gets movie detail id and finds similar movies
     async getMovieDetails() {
       try {
         const res = await axios(`${proxy}https://api.themoviedb.org/3/movie/${this.id}?api_key=${key}&append_to_response=similar`);
@@ -21,15 +22,7 @@ import {key, proxy } from '../config';
       }
     };
 
-    // check_Dups(randomNumber){
-    //   if (randomNumber[0] == randomNumber[1] || randomNumber[0] == randomNumber[2] || randomNumber[1] == randomNumber[2]) {
-    //     // this.getSimilarMovie();
-    //     return true;
-    //   } else {
-    //     return false;
-    //   }
-    // };
-
+    //Returns 3 random number to get similar movies id
     getSimilarMovie() {
       let randomNum = [];
       let random = () => {
@@ -49,6 +42,7 @@ import {key, proxy } from '../config';
     return randomNum.slice(0, 3);
     };
 
+    //Push movie genres into a single array
     getGenres() {
       const newGenres = [];
       for (let i = 0; i < this.genres.length; i++) {

@@ -1,22 +1,27 @@
 import { elements } from './base';
 
+//Get the movie input from user
 export const getInput = () => elements.searchInput.value;
 
+//Clear the input
 export const clearInput = () => {
   elements.searchInput.value = '';
 };
 
+//Clear the results
 export const clearResult = () => {
   elements.searchResults.innerHTML = '';
 }
 
+//Shows only the four release year
 export const limitReleaseYear = (year) => {
   const newYear = [];
         newYear.push(year.slice(0,4));
          //return the result
     return `${newYear}`;
       }
-  
+ 
+//Shows the results list
 const renderMovie = movie => {
   const markup = `
   <li>
@@ -34,6 +39,7 @@ const renderMovie = movie => {
     elements.searchResults.insertAdjacentHTML('beforeend', markup);
 };
 
+//Shows each results
 export const renderResults = (movies) => {
   movies.forEach(renderMovie)
 }

@@ -1,3 +1,4 @@
+//Adds html elements classes and id to the document query selector
 export const elements = {
   searchForm: document.querySelector('.search'),
   searchInput: document.querySelector('.search_field'),
@@ -9,9 +10,11 @@ export const elements = {
   similarMovieThree: document.querySelector('.similar_movie_three')
 }
 
+//Loads loader icon when api search for movie
 export const elementsStrings = {
   loader: 'loader'
 }
+
 export const renderLoader = parent => {
   const loader = `
     <div class="${elementsStrings.loader}">
@@ -23,6 +26,7 @@ export const renderLoader = parent => {
   parent.insertAdjacentHTML('afterbegin', loader);
 };
 
+//Remove the loader from the interface when search is complete
 export const clearLoader = () => {
   const loader = document.querySelector(`.${elementsStrings.loader}`)
   if (loader) loader.parentElement.removeChild(loader);

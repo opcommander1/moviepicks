@@ -1,6 +1,7 @@
 import axios from 'axios';
 import {key, proxy } from '../config';
 
+  //Search movie api by id and returns actors credits
   export default class Credits {
     constructor(id) {
       this.id = id;

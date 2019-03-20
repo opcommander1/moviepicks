@@ -62,7 +62,7 @@ const controlCredits = async () => {
   const id = window.location.hash.replace('#', '');
   // console.log(id);
 
-  if ((id !== "similar_heading") && (id !== "movie_info") && (id !== "about")) {
+  if ((id !== "similar_heading") && (id !== "movie_info") && (id !== "about") && (id !== "")) {
 
     // Prepare UI for changes
     creditsView.clearCredits();
@@ -93,7 +93,7 @@ const movieInfoControler = async () => {
   const id = window.location.hash.replace('#', '');
   console.log(id);
 
-  if ((id !== "similar_heading") && (id !== "movie_info") && (id !== "about")){
+  if ((id !== "similar_heading") && (id !== "movie_info") && (id !== "about") && (id !== "")){
   //Prepare UI for changes
   movieDetailsView.clearMovie();
   similarMovieView.clearSimilarMovies();

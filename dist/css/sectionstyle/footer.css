@@ -1,0 +1,26 @@
+footer ul {
+  text-align: center;
+  border-top: 1px solid rgb(82, 167, 236);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+}
+
+footer ul li {
+  color: #ffffff;
+  /* padding-top: 7px; */
+  padding-bottom: 18px;
+}
+
+footer ul li h1 {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+footer ul li h2 {
+  font-weight: 300;
+}
+
+footer ul li img {
+  width: 70px;
+}

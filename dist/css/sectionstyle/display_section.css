@@ -27,21 +27,22 @@
 
 #actors_display {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 400px 400px 400px;
   grid-gap: 10px;
+  justify-content: center;
 }
 
 #actors_display .wrapper {
   box-sizing: content-box;
   margin-top: 50px;
   margin-bottom: 50px;
-  width: 350px;
+  width: 300px;
   height: 701px;
   border: 1px solid white;
-  margin-left: 65px;
+  margin-left: 96px;
   overflow: hidden;
   background-color: #ffffff;
-  webkit-box-shadow: 1px 4px 105px -9px rgba(14,142,240,1);
+  -webkit-box-shadow: 1px 4px 105px -9px rgba(14,142,240,1);
   -moz-box-shadow: 1px 4px 105px -9px rgba(14,142,240,1);
   box-shadow: 1px 4px 105px -9px rgba(14,142,240,1);
 }
@@ -75,9 +76,7 @@
   padding-top: 10px;
   background-repeat: no-repeat;
   background-size: cover;
-  /* border-radius: 54px; */
   max-width: 100px;
-  /* left: 120px; */
   position: relative;
   padding-left: 10px;
   padding-bottom: 5px;
@@ -85,17 +84,10 @@
 }
 
 .actors .actors_items .actor_img .actor_name {
- /* margin-top: 0px; */
- /* right: 10px; */
  margin-top: 3px;
- /* position: absolute; */
- /* color: #000000; */
 }
 
 .actors .actors_items .actor_img .stage_name {
-  /* right: 10px; */
-  /* position: absolute; */
-  /* color: #000000; */
   margin-bottom: 16px;
 }
 
@@ -120,7 +112,7 @@
 }
 
 .title_image img {
-  max-width: 382px;
+  max-width: 100%;
   text-align: center;
 }
 .background_display {
@@ -170,10 +162,53 @@
 }
 
 .ad_image a img {
-padding: 10px 53px;
+padding: 10px 66px;
 max-width: 400px;
 max-height: 400px;
 
+}
+
+/**** Mobile Responsive ***/
+@media screen and (max-width: 1100px) {
+  #actors_display {
+    grid-template-columns: 300px 300px 300px;
+  }
+
+  #actors_display .wrapper {
+    width: 201px;
+  }
+
+  .ad_image a img {
+    padding: 10px 19px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+  
+  #actors_display {
+    grid-template-columns:  400px;
+    grid-gap: 0px;
+    grid-column: 1/1;
+  }
+
+  #movies_display {
+    grid-column: 2/1;
+    width: 200px;
+    margin-left: 97px;
+  }
+
+  #ad_display {
+    grid-column:  3/1;
+    width: 200px;
+    margin-left: 97px;
+    margin-bottom: 50px;
+  }
+
+  .ad_image a img {
+    padding: 10px 11px;
+    width: 184px;
+    margin-left: 7px;
+    }
 }
 
 

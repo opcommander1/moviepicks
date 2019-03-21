@@ -12,7 +12,7 @@ export default class Search {
   //Finds the requested api movie
   async getMovieResults() {
       try {
-        const res = await axios(`https://cors-anywhere.herokuapp.com/https://api.themoviedb.org/3/search/movie?api_key=3d6ac87c32c71a4673657cec3692d846&query=${this.query}`);
+        const res = await axios(`${process.env.MOVIE_PROXY}https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIE_KEY}&query=${this.query}`);
         this.result = res.data.results;
       } catch (error) {
         alert(error);

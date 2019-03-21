@@ -1,6 +1,6 @@
 import axios from 'axios';
 // import {key, proxy } from '../config';
-
+require('dotenv').config();
 
 
 

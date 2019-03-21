@@ -6,10 +6,11 @@ import * as creditsView from './views/creditsView';
 import * as movieDetailsView from './views/MovieDetailView'; 
 import * as similarMovieView from './views/similarMovieView';
 import { elements, renderLoader, clearLoader } from './views/base';
-var port = process.env.PORT || 8080;
 
-  index.listen(port,function() {
-  console.log("app running on port 8080"); });
+
+index.listen(8888, function(){
+  console.log("Server has stated");
+});
 
 
 

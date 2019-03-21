@@ -1,5 +1,4 @@
-var express           = require("express"),
-    index               = express()
+
 import Search from './models/Search';
 import Credits from './models/Credits';
 import MovieDetails from './models/MovieDetail';

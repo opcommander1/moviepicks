@@ -8,9 +8,7 @@ import * as similarMovieView from './views/similarMovieView';
 import { elements, renderLoader, clearLoader } from './views/base';
 
 
-index.listen(8888, function(){
-  console.log("Server has stated");
-});
+
 
 
 
@@ -117,5 +115,7 @@ const movieInfoControler = async () => {
 ['hashchange', 'load'].forEach(event => window.addEventListener(event, movieInfoControler));
 
 
-
+app.listen(8888, function(){
+  console.log("Server has stated");
+});
 

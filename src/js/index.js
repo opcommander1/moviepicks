@@ -1,4 +1,4 @@
-const express = require("express")
+import express from 'express';
 const app     = express()
 import Search from './models/Search';
 import Credits from './models/Credits';

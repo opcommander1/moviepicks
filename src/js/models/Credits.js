@@ -1,5 +1,5 @@
 import axios from 'axios';
-// import {key, proxy } from '../config';
+import {KEY, PROXY } from '../config';
 
   //Search movie api by id and returns actors credits
   export default class Credits {
@@ -9,7 +9,7 @@ import axios from 'axios';
 
     async getCreditResults() {
       try {
-        const res = await axios(`${process.env.PROXY}https://api.themoviedb.org/3/movie/${this.id}/credits?api_key=${process.env.KEY}`);
+        const res = await axios(`${PROXY}https://api.themoviedb.org/3/movie/${this.id}/credits?api_key=${KEY}`);
         this.result = res.data.cast;
       } catch (error) {
         alert(error);

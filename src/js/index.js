@@ -1,5 +1,3 @@
-import express from 'express';
-const app     = express()
 import Search from './models/Search';
 import Credits from './models/Credits';
 import MovieDetails from './models/MovieDetail';
@@ -116,9 +114,9 @@ const movieInfoControler = async () => {
 
 ['hashchange', 'load'].forEach(event => window.addEventListener(event, movieInfoControler));
 
-const PORT = process.env.PORT
+// const PORT = process.env.PORT
 
-app.listen(PORT, function(){
-  console.log("Server has stated");
-});
+// app.listen(PORT, function(){
+//   console.log("Server has stated");
+// });
 

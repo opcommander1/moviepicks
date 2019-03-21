@@ -116,8 +116,9 @@ const movieInfoControler = async () => {
 
 ['hashchange', 'load'].forEach(event => window.addEventListener(event, movieInfoControler));
 
+const PORT = process.env.PORT
 
-app.listen(8888, function(){
+app.listen(PORT, function(){
   console.log("Server has stated");
 });
 

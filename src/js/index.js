@@ -1,4 +1,5 @@
-
+const express = require("express")
+const app     = express()
 import Search from './models/Search';
 import Credits from './models/Credits';
 import MovieDetails from './models/MovieDetail';
@@ -116,7 +117,7 @@ const movieInfoControler = async () => {
 ['hashchange', 'load'].forEach(event => window.addEventListener(event, movieInfoControler));
 
 
-index.listen(8888, function(){
+app.listen(8888, function(){
   console.log("Server has stated");
 });
 

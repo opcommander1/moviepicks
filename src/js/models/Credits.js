@@ -1,4 +1,5 @@
 import axios from 'axios';
+require('dotenv').config();
 // import {key, proxy } from '../config';
 
   //Search movie api by id and returns actors credits

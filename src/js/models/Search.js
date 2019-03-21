@@ -1,5 +1,7 @@
 import axios from 'axios';
-import {key, proxy } from '../config';
+// import {key, proxy } from '../config';
+
+
 
 export default class Search {
   constructor(query) {
@@ -9,9 +11,8 @@ export default class Search {
   //Finds the requested api movie
   async getMovieResults() {
       try {
-        const res = await axios(`${proxy}https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${this.query}`);
+        const res = await axios(`${process.env.PROXY}https://api.themoviedb.org/3/search/movie?api_key=${process.env.KEY}&query=${this.query}`);
         this.result = res.data.results;
-        // console.log(this.result);
       } catch (error) {
         alert(error);
       }

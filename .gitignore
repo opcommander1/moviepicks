@@ -4,5 +4,5 @@ node_modules
 /.blackbox/secring.gpg
 src/js/config.js
 
-# /src/js/config.js
+/src/js/config.js
 /.env

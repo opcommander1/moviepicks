@@ -1,7 +1,4 @@
 import axios from 'axios';
-import {key, proxy } from '../config';
-let info = require('../../../secret');
-
 
 
 
@@ -13,10 +10,8 @@ export default class Search {
   //Finds the requested api movie
   async getMovieResults() {
       try {
-        const res = await axios(`${proxy}https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${this.query}`);
+        const res = await axios(`${process.env.MOVIE_PROXY}https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIE_KEY}&query=${this.query}`);
         this.result = res.data.results;
-        console.log(info.secret.key);
-        consolg.log(process.env.MOVIE_KEY);
       } catch (error) {
         alert(error);
       }

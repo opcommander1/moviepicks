@@ -3,6 +3,5 @@ node_modules
 /.blackbox/pubring.kbx~
 /.blackbox/secring.gpg
 # src/js/config.js
-
-# /src/js/config.js
 /.env
+/src/js/config.js

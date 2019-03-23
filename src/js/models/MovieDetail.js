@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {key, proxy } from '../config';
+
 
 
   export default class MovieDetails {
@@ -10,7 +10,7 @@ import {key, proxy } from '../config';
     //Gets movie detail id and finds similar movies
     async getMovieDetails() {
       try {
-        const res = await axios(`${proxy}https://api.themoviedb.org/3/movie/${this.id}?api_key=${key}&append_to_response=similar`);
+        const res = await axios(`${process.env.MOVIE_PROXY}https://api.themoviedb.org/3/movie/${this.id}?api_key=${process.env.MOVIE_KEY}&append_to_response=similar`);
         this.backdrop = res.data.backdrop_path;
         this.genres = res.data.genres;
         this.overview = res.data.overview;

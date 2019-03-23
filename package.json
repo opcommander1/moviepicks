@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "node server.js",
-    "heroku-postbuild": "webpack -p",
-    "start": "webpack-dev-server --mode development --open"
+    "heroku-postbuild": "webpack -p"
   },
   "author": "shereal mcneal",
   "license": "ISC",

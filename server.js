@@ -7,7 +7,9 @@ require('custom-env').env(true);
 let info = require('./secret');
 
 info.secret.key = process.env.key;
-info.secret.key = process.env.proxy;
+info.secret.proxy = process.env.proxy;
+
+app.use(info.secret.key);
 
 // console.log(`Hi my name is ${process.env.key}`);
 

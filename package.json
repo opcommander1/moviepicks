@@ -4,7 +4,7 @@
   "description": "movie suggestion",
   "main": "index.js",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "NODE_ENV=staging node server.js",
     "heroku-postbuild": "webpack -p"
   },
   "author": "shereal mcneal",

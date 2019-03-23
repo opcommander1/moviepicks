@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {key, proxy } from '../config';
 let info = require('../../../secret');
-
+"kkk";
 
 
 
@@ -15,7 +15,7 @@ export default class Search {
       try {
         const res = await axios(`${proxy}https://api.themoviedb.org/3/search/movie?api_key=${key}&query=${this.query}`);
         this.result = res.data.results;
-        console.log(info.secret.key = "test");
+        console.log(info.secret.key = process.env.key);
       } catch (error) {
         alert(error);
       }

@@ -17,8 +17,8 @@ module.exports = {
             template: './src/index.html'
         }),
         new Dotenv({
-            path: path.resolve(__dirname, './.env'),
-        })
+            path: path.resolve(__dirname, './.env')
+        }),
     ],
     module: {
         rules: [
